@@ -160,15 +160,11 @@ while(True):
     draw_aim(frame, sz)
 
     cv2.imshow('frame',frame)
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
-
-
 
     # To stop duplicate images
     currentFrame += 1
 
-    kk = cv2.waitKey(33)
+    kk = cv2.waitKey(1)
     if kk == ord('z'):
         zoom += 1
         if zoom >= len(sz.zooms):
